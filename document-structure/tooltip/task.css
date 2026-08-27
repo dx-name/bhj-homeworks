@@ -5,6 +5,8 @@
 .has-tooltip {
   color: #000;
   background: yellow;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .has-tooltip:hover {
@@ -15,9 +17,13 @@
   position: fixed;
   display: none;
   background: black;
-  padding: 5px;
+  padding: 8px 12px;
   border-radius: 5px;
   color: #fff;
+  font-size: 14px;
+  z-index: 9999;
+  pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,.3);
 }
 
 .tooltip_active {

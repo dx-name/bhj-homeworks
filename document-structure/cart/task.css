@@ -1,48 +1,68 @@
 body {
   font-family: Arial;
 }
+
 .cart__products {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
+  gap: 10px;
+  min-height: 60px;
 }
 
 .cart__product {
   position: relative;
+  display: inline-block;
 }
+
 .cart__product-count {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -5px;
+  right: -5px;
   border: 2px solid green;
   border-radius: 50%;
-  padding: 2px 5px;
+  padding: 4px 8px;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,.2);
 }
 
 .cart__product-image {
   border-radius: 6px;
-  margin-right: 10px;
   width: 100px;
   height: 100px;
-  object-fit: contain;
+  object-fit: cover;
 }
+
 .product {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
 }
+
 .product__title {
   width: 100%;
   text-transform: uppercase;
+  margin: 0 0 10px 0;
 }
 
 .product__image {
   width: 100px;
-  object-fit: contain;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
 }
 
 .product__quantity-title {
   text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 8px;
 }
 
 .product__quantity-controls {
@@ -50,10 +70,11 @@ body {
   margin: 10px 0;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .product__quantity-control {
-  padding: 5px 10px;
+  padding: 8px 12px;
   box-sizing: border-box;
   cursor: pointer;
   border: 1px solid gray;
@@ -62,6 +83,7 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  user-select: none;
 }
 
 .product__quantity-control:hover {
@@ -72,6 +94,7 @@ body {
 .product__quantity-value {
   box-sizing: border-box;
   padding: 0 10px;
+  font-weight: bold;
 }
 
 .product__add {
@@ -80,12 +103,10 @@ body {
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+  text-align: center;
+  user-select: none;
 }
 
 .product__add:hover {
   opacity: 0.8;
-}
-
-.product-shadow {
-  position: absolute;
 }

@@ -20,3 +20,7 @@ body {
 .loader_active {
   display: block;
 }
+
+.loader.loader_active {
+  display: block;
+}
